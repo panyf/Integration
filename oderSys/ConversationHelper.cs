@@ -4,14 +4,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConversationAPI
 {   
     public class ConversationHelper
     {
-        
 
+        
         private readonly string _Server;
         private readonly NetworkCredential _NetCredential;
         public ConversationHelper(string workSpaceId, string userId, string password)
@@ -24,17 +25,20 @@ namespace ConversationAPI
             string req = null;
             if (string.IsNullOrEmpty(context)) req = "{\"input\": {\"text\": \"" + input + "\"}, \"alternate_intents\": true}";
             else req = "{\"input\": {\"text\": \"" + input + "\"}, \"alternate_intents\": true}, \"context\": \"" + context + "\"";
-            using (var handler = new HttpClientHandler
-            {
-                Credentials = _NetCredential
-            })
+            var handler = new HttpClientHandler();
+
+            handler.Credentials = _NetCredential;
+             
             using (var client = new HttpClient(handler))
             {
                 var cont = new HttpRequestMessage();
+              
                 cont.Content = new StringContent(req.ToString(), Encoding.UTF8, "application/json");
-                var  result = await client.PostAsync(_Server, cont.Content);
-                return await  result.Content.ReadAsStringAsync();
+                var result = await client.PostAsync(_Server, cont.Content);
+                return await result.Content.ReadAsStringAsync();
             }
         }
+
+       
     }
 }

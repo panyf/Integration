@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace oderSys
+namespace ConversationAPI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace oderSys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new orderPannel());
+            Application.Run(new OrderPanel());
         }
     }
 }
