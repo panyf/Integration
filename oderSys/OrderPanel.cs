@@ -16,16 +16,13 @@ namespace  ConversationAPI
     public partial class OrderPanel : Form
     {
         ConversationHelper helper = new ConversationHelper("a2bba1ef-9fa5-4002-a0c6-ffba34fd4983", "2c17fe46-d34b-4608-9f9b-03108554a9e8", "2W00upyXOUBb");
-        int totalPrice = 0;
-        int orderPrice = 0;
-        
+        System.Timers.Timer t = new System.Timers.Timer(2000);
         string input = "";
-        string secondInput = "";
 
         public OrderPanel()
         {
             InitializeComponent();
-            lbl.Text = "Hi,how can I help you?";
+            lbl.Text = "Auto Order System";
             txtarea.Text = "Robot: Hi,how can I help you?";
         }
 
@@ -38,17 +35,25 @@ namespace  ConversationAPI
             int IndexofA = res.IndexOf(strtempa);
             int IndexofB = res.IndexOf(strtempb);
             string Ru = res.Substring(IndexofA + 18, IndexofB - IndexofA - 18);
-            lbl.Text = Ru;
+
+            
+
             if (txtarea.Text.Equals(""))
                 txtarea.Text = "You: " + input + Environment.NewLine + "Robot: " + Ru;
             else
                 txtarea.Text = txtarea.Text + Environment.NewLine + Environment.NewLine + "You: " + input + Environment.NewLine + "Robot: " + Ru;
             txtbox.Text = "";
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtarea.Text = "";
+        }
+
+        void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            txtarea.Text = txtarea.Text + "\n" + "aaa";
         }
     }
 }

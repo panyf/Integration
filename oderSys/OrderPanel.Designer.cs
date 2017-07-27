@@ -37,7 +37,7 @@
             // 
             // btn
             // 
-            this.btn.Location = new System.Drawing.Point(372, 85);
+            this.btn.Location = new System.Drawing.Point(291, 374);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(75, 23);
             this.btn.TabIndex = 0;
@@ -48,7 +48,7 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(12, 47);
+            this.lbl.Location = new System.Drawing.Point(9, 19);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(35, 13);
             this.lbl.TabIndex = 1;
@@ -56,23 +56,24 @@
             // 
             // txtbox
             // 
-            this.txtbox.Location = new System.Drawing.Point(12, 87);
+            this.txtbox.Location = new System.Drawing.Point(15, 376);
             this.txtbox.Name = "txtbox";
-            this.txtbox.Size = new System.Drawing.Size(329, 20);
+            this.txtbox.Size = new System.Drawing.Size(261, 20);
             this.txtbox.TabIndex = 2;
             // 
             // txtarea
             // 
-            this.txtarea.Location = new System.Drawing.Point(12, 141);
+            this.txtarea.Location = new System.Drawing.Point(12, 61);
             this.txtarea.Multiline = true;
             this.txtarea.Name = "txtarea";
+            this.txtarea.ReadOnly = true;
             this.txtarea.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtarea.Size = new System.Drawing.Size(435, 277);
             this.txtarea.TabIndex = 3;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(372, 441);
+            this.btnClear.Location = new System.Drawing.Point(372, 374);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 4;
@@ -85,7 +86,7 @@
             this.AcceptButton = this.btn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 489);
+            this.ClientSize = new System.Drawing.Size(460, 435);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtarea);
             this.Controls.Add(this.txtbox);
