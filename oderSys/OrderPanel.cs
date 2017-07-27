@@ -26,7 +26,7 @@ namespace  ConversationAPI
         {
             InitializeComponent();
             lbl.Text = "Hi,how can I help you?";
-            txtarea.Text = "Hi,how can I help you?";
+            txtarea.Text = "Robot: Hi,how can I help you?";
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -39,8 +39,16 @@ namespace  ConversationAPI
             int IndexofB = res.IndexOf(strtempb);
             string Ru = res.Substring(IndexofA + 18, IndexofB - IndexofA - 18);
             lbl.Text = Ru;
-            txtarea.Text = txtarea.Text + Environment.NewLine + Environment.NewLine + input + Environment.NewLine + Ru;
+            if (txtarea.Text.Equals(""))
+                txtarea.Text = "You: " + input + Environment.NewLine + "Robot: " + Ru;
+            else
+                txtarea.Text = txtarea.Text + Environment.NewLine + Environment.NewLine + "You: " + input + Environment.NewLine + "Robot: " + Ru;
             txtbox.Text = "";
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtarea.Text = "";
         }
     }
 }
