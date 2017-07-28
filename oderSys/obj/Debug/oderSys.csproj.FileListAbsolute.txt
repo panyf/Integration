@@ -1,0 +1,9 @@
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\bin\Debug\oderSys.exe.config
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\bin\Debug\oderSys.exe
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\bin\Debug\oderSys.pdb
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.csprojResolveAssemblyReference.cache
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.Properties.Resources.resources
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.csproj.GenerateResource.Cache
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.exe
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.pdb
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.orderPannel.resources
