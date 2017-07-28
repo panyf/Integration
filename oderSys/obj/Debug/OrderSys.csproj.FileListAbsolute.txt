@@ -10,3 +10,4 @@ C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\bin\Debug\oderSys.exe.manifest
 C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\bin\Debug\oderSys.application
 C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.exe.manifest
 C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\oderSys.application
+C:\Users\yfpan\Source\Repos\Test\oderSys\oderSys\obj\Debug\OrderSys.csprojResolveAssemblyReference.cache
