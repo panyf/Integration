@@ -10,9 +10,7 @@ using System.Windows.Forms;
 
 
 namespace  ConversationAPI
-
 {
-
     public partial class OrderPanel : Form
     {   
         //new a COnversationHelper class to post value to the Watson and get the return value,
