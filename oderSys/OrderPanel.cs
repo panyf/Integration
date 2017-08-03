@@ -12,11 +12,8 @@ using System.Windows.Forms;
 namespace  ConversationAPI
 {
     public partial class OrderPanel : Form
-    {   
-        //new a COnversationHelper class to post value to the Watson and get the return value,
-        //pass on the workID, userID, password
-        ConversationHelper helper = new ConversationHelper("a2bba1ef-9fa5-4002-a0c6-ffba34fd4983", "2c17fe46-d34b-4608-9f9b-03108554a9e8", "2W00upyXOUBb");
-        string input = "";
+    {
+        public orderAI orderAIForm;
 
         /// <summary>
         /// OrderPanel class constructor
@@ -27,44 +24,19 @@ namespace  ConversationAPI
         public OrderPanel()
         {
             InitializeComponent();
-            lbl.Text = "Auto Order System";
-            txtarea.Text = "Robot: Hi,how can I help you?";
+            orderAIForm = new orderAI();
         }
 
-        /// <summary>
-        /// send button click event
-        /// this event will get the value of the GetResponse method of ConversationHelper class
-        /// get the substring of the return value and give the value to the string "Ru"
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btn_Click(object sender, EventArgs e)
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            input = txtbox.Text;
-            var res = Task.Run(() => helper.GetResponse(input).GetAwaiter().GetResult()).Result;  //run the statement after the task finish
-            string strtempa = "output\":{\"text\":[\"";
-            string strtempb = "\"],\"nodes_visited";
-            int IndexofA = res.IndexOf(strtempa);
-            int IndexofB = res.IndexOf(strtempb);
-            string Ru = res.Substring(IndexofA + 18, IndexofB - IndexofA - 18); // get the value of part of the json format result
-            //use the textbox named txtarea to record the message
-            if (txtarea.Text.Equals(""))
-                txtarea.Text = "You: " + input + Environment.NewLine + "Robot: " + Ru;
-            else
-                txtarea.Text = txtarea.Text + Environment.NewLine + Environment.NewLine + "You: " + input + Environment.NewLine + "Robot: " + Ru;
-            txtbox.Text = "";
-
+            orderAIForm.Show();
+            groupBox.Controls.Clear();
+            groupBox.Controls.Add(orderAIForm);
         }
 
-        /// <summary>
-        /// clear button click event
-        /// clear the txtarea compoment
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClear_Click(object sender, EventArgs e)
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            txtarea.Text = "";
+            Application.Exit();
         }
     }
 }
